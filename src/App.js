@@ -1,6 +1,11 @@
 import React from 'react';
-import {Splash} from './pages';
+import {NavigationContainer} from '@react-navigation/native';
+import Router from './router';
 
 export default function App() {
-  return <Splash />;
+  return (
+    <NavigationContainer>
+      <Router />
+    </NavigationContainer>
+  );
 }
