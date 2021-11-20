@@ -1,7 +1,7 @@
 import React from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import {Button, Header, Input, Gap} from '../../components';
-import {Colors} from '../../utils';
+import {colors} from '../../utils';
 
 export default function Register({navigation}) {
   return (
@@ -16,7 +16,10 @@ export default function Register({navigation}) {
         <Gap height={24} />
         <Input label="Password" />
         <Gap height={40} />
-        <Button title="Continue" />
+        <Button
+          title="Continue"
+          onPress={() => navigation.navigate('UploadPhoto')}
+        />
       </View>
     </ScrollView>
   );
@@ -28,7 +31,7 @@ const styles = StyleSheet.create({
     paddingTop: 0,
   },
   page: {
-    backgroundColor: Colors.white,
+    backgroundColor: colors.white,
     flex: 1,
   },
 });
